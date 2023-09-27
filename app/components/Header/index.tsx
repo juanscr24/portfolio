@@ -5,13 +5,13 @@ import { BsFacebook, BsLinkedin } from 'react-icons/bs';
 
 const Header = () => {
     return (
-        <div className='w-3/4 bg-white rounded-t-2xl max-lg:w-full'>
+        <div className='w-3/4 bg-white rounded-t-2xl max-lg:rounded-none max-lg:w-full'>
             <div className='flex justify-between my-10 mx-16 max-sm:mx-4 max-sm:my-4'>
                 <h1 className='text-black font-bold text-2xl max-sm:text-base'>Juan Cardona</h1>
                 <div className='flex text-black gap-20 font-bold text-lg max-sm:text-sm max-sm:gap-3 max-xl:gap-6'>
-                    <a href="#">Trabajos</a>
-                    <a href="#">Servicios</a>
-                    <a href="#">Contactos</a>
+                    <a href="#skills" className='hover:border-b-2 hover:border-b-slate-700'>Skills</a>
+                    <a href="#trabajos" className='hover:border-b-2 hover:border-b-slate-700'>Works</a>
+                    <a href="#contactos" className='hover:border-b-2 hover:border-b-slate-700'>Contact Us</a>
                 </div>
             </div>
             <div className='grid grid-cols-2 ml-16 items-center max-sm:m-4 max-sm:grid-cols-1 max-xl:pb-5'>
@@ -26,7 +26,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='w-full'>
-                    <Image src='/work.jpg' alt='' width={1000} height={1000} className='object-contain' />
+                    <Image src='/foto.png' alt='' width={1000} height={1000} className='' />
                 </div>
             </div>
         </div>
