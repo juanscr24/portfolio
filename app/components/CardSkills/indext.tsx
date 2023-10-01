@@ -6,7 +6,7 @@ const CardSkills:React.FC<ICardSkills> = ({ icon, title, desc, color='html' }) =
             <div className="flex flex-col items-center">
                 <h1 className="font-bold">{title}</h1>
                 <span className={`text-7xl max-md:text-4xl bg-gray-100 rounded-full my-2 p-5 ${EnumColorx[color]}`}>{icon}</span>
-                <p className="text-center w-[80%] max-sm:text-sm text-gray-700">{desc}</p>
+                <p className="text-center w-[80%] max-sm:text-sm text-gray-700 max-sm:hidden">{desc}</p>
             </div>
         </div>
     )

@@ -25,8 +25,8 @@ const Header = () => {
                         <a href=""><SiGmail className='text-[#ea4335]' /></a>
                     </div>
                 </div>
-                <div className='w-full'>
-                    <Image src='/foto.png' alt='' width={1000} height={1000} className='' />
+                <div className='w-full flex items-center justify-center'>
+                    <Image src='/foto.png' alt='' width={400} height={400} />
                 </div>
             </div>
         </div>

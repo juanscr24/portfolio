@@ -7,7 +7,7 @@ const SectionOne = () => {
             <a id='trabajos'></a><h1 className='text-white text-2xl font-bold'>Algunos de mis trabajos</h1>
             <p className='text-white'>Mis mejores trabajos</p>
             <div className='flex mt-5 flex-wrap justify-between'>
-                <CardWork title='Title' desc='Description' img='/work.jpg' />
+                <CardWork title='Title' desc='Description' img='/foto1.jpg' />
                 <CardWork title='Title' desc='Description' img='/work.jpg' />
                 <CardWork title='Title' desc='Description' img='/work.jpg' />
                 <CardWork title='Title' desc='Description' img='/work.jpg' />
