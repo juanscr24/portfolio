@@ -10,13 +10,14 @@ const Skills = () => {
     return (
         <div className='w-3/4 bg-white flex flex-col items-center px-16 py-10 gap-2 max-lg:w-full max-sm:px-4 max-sm:py-4'>
             <a id='skills'></a><h1 className='mt-5 max-sm:mx-4 max-sm:my-4 font-bold text-3xl'>My Skills</h1>
+            <p className='text-zinc-400 max-sm:text-sm'></p>
             <div className='flex justify-between my-10 max-sm:mx-4 max-sm:my-4 flex-wrap gap-5'>
-                <CardSkills title='HTML' icon={<AiFillHtml5 />} desc='Esto solamente es una prueba para ver como queda' color='html' />
-                <CardSkills title='CSS' icon={<BiLogoCss3 />} desc='Esto solamente es una prueba para ver como queda' color='css' />
-                <CardSkills title='Tailwind' icon={<BiLogoTailwindCss />} desc='Esto solamente es una prueba para ver como queda' color='tailwind' />
-                <CardSkills title='AntDesign' icon={<SiMui />} desc='Esto solamente es una prueba para ver como queda' color='antDesgin'/>
-                <CardSkills title='javascript' icon={<IoLogoJavascript />} desc='Esto solamente es una prueba para ver como queda' color='javascript' />
-                <CardSkills title='NextJs' icon={<TbBrandNextjs />} desc='Esto solamente es una prueba para ver como queda' color='nextJs' />
+                <CardSkills title='HTML' icon={<AiFillHtml5 />} color='html' />
+                <CardSkills title='CSS' icon={<BiLogoCss3 />} color='css' />
+                <CardSkills title='Tailwind' icon={<BiLogoTailwindCss />} color='tailwind' />
+                <CardSkills title='AntDesign' icon={<SiMui />} color='antDesgin'/>
+                <CardSkills title='javascript' icon={<IoLogoJavascript />} color='javascript' />
+                <CardSkills title='NextJs' icon={<TbBrandNextjs />} color='nextJs' />
             </div>
         </div>
     )
