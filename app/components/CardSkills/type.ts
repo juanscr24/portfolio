@@ -4,7 +4,7 @@ export interface ICardSkills {
     icon: ReactNode;
     title: string;
     desc?: string;
-    color?:ColorIcon;
+    color?:ColorIcon | string;
 }
 
 export type ColorIcon = 'html' | 'css' | 'tailwind' | 'antDesgin' | 'javascript' | 'nextJs' ;
