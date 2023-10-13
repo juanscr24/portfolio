@@ -1,3 +1,7 @@
+import { ReactNode } from 'react'
+
 export interface IModal {
-    isVisible: boolean | undefined;
+    isVisible: boolean
+    onClose: () => void
+    children: ReactNode
 }
