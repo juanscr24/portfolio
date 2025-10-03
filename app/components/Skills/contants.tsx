@@ -2,8 +2,9 @@ import { TbBrandNextjs, TbBrandTypescript } from 'react-icons/tb'
 import { BiLogoTailwindCss } from 'react-icons/bi'
 import { FaHtml5 } from "react-icons/fa";
 import { SiMui, SiReact } from 'react-icons/si'
+import { ColorIcon } from '../CardSkills/type'
 
-export const skill = [
+export const skill: Array<{id: number, title: string, icon: React.ReactNode, color: ColorIcon}> = [
     {
         id: 0,
         title: 'HTML',
@@ -14,7 +15,7 @@ export const skill = [
         id: 1,
         title: 'Tailwind',
         icon: <BiLogoTailwindCss />,
-        color: 'antDesgin'
+        color: 'tailwind'
     },
     {
         id: 2,

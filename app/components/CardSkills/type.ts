@@ -4,10 +4,10 @@ export interface ICardSkills {
     icon: ReactNode;
     title: string;
     desc?: string;
-    color?: ColorIcon | string;
+    color?: ColorIcon;
 }
 
-export type ColorIcon = 'html' | 'css' | 'tailwind' | 'antDesgin' | 'javascript' | 'nextJs';
+export type ColorIcon = keyof typeof EnumColorx;
 export enum EnumColorx {
     html = 'text-[#e34f26]',
     css = 'text-[#002561]',
