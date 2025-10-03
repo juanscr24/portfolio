@@ -1,14 +1,14 @@
 import { TbBrandNextjs } from 'react-icons/tb'
 import { IoLogoJavascript } from 'react-icons/io'
 import { BiLogoCss3, BiLogoTailwindCss } from 'react-icons/bi'
-import { AiFillHtml5 } from 'react-icons/Ai'
+import { FaHtml5 } from "react-icons/fa";
 import { SiMui } from 'react-icons/si'
 
 export const skill = [
     {
         id: 0,
         title: 'HTML',
-        icon: <AiFillHtml5 />,
+        icon: <FaHtml5 />,
         color: 'html'
     },
     {

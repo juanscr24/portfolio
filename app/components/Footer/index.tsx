@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from '../Contact'
 import { BsPhoneVibrate } from 'react-icons/bs'
-import { AiOutlineMail } from 'react-icons/Ai'
+import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                 <p></p>
                 <div className='flex gap-36 justify-center max-md:gap-24'>
                     <Contact title='Phone:' desc='3012084032' icon={<BsPhoneVibrate />} />
-                    <Contact title='Email:' desc='juanscr24@gmail.com' icon={<AiOutlineMail />} />
+                    <Contact title='Email:' desc='juanscr24@gmail.com' icon={<CiMail />} />
                 </div>
             </div>
         </div>
