@@ -1,10 +1,11 @@
-import { SiGmail } from 'react-icons/si';
-import { BsFacebook, BsLinkedin } from 'react-icons/bs';
+import { FaLinkedinIn } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
 
 export const dateName = ['Skills', 'Works', 'Contact Us']
 
 export const socialMedia = [
-    { icon: BsFacebook, className: 'text-[#1877f2]' },
-    { icon: BsLinkedin, className: 'text-[#0a66c2]' },
-    { icon: SiGmail, className: 'text-[#ea4335]' }
+    { icon: FaLinkedinIn, className: 'text-[#00000] opacity-30', href: "https://co.linkedin.com/" },
+    { icon: BiLogoGmail, className: 'text-[#00000] opacity-30', href: "mailto:juanscr24@gmail.com" },
+    { icon: FaGithub, className: 'text-[#00000] opacity-30', href: "https://github.com/juanscr24"}
 ]
