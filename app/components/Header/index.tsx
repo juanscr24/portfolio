@@ -17,7 +17,7 @@ const Header = () => {
                     <h2 className='text-cyan-700 text-xl font-bold'>Frontend Developer</h2>
                     <p className='text-zinc-400 max-sm:text-sm'>I am a passionate individual with a strong interest in technology, particularly in web development, specifically Front-end. I have experience working with React.js and Next.js, as well as proficiency in JavaScript and other related technologies.</p>
                     <div className='flex gap-5 text-3xl max-sm:items-center max-sm:my-3'>
-                        {socialMedia.map((option)=>(<a href="">{option}</a>))}
+                        {socialMedia.map((option, index)=>(<a key={index} href="">{option}</a>))}
                     </div>
                 </div>
                 <div className='w-full flex items-center justify-center'>

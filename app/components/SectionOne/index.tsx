@@ -3,7 +3,6 @@ import { useState } from 'react'
 import CardWork from '../CardWork'
 import Modal from '../Modal'
 import { cardImage } from './constants'
-import Image from 'next/image'
 
 const SectionOne = () => {
     const [showModal, setShowModal] = useState<boolean>(false)
