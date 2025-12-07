@@ -33,10 +33,10 @@ export default function Hero() {
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <Button variant="primary" size="lg" href="#contact">
+                            <Button target="" variant="primary" size="lg" href="#contact">
                                 {t('button')}
                             </Button>
-                            <Button variant="outline" size="lg" href="/cv.pdf">
+                            <Button target="" variant="outline" size="lg" href="/cv.pdf">
                                 {t('button-2')}
                             </Button>
                         </div>

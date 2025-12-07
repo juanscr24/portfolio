@@ -4,6 +4,7 @@ import Card from '../ui/Card';
 import { useTranslations } from 'next-intl';
 import { techStack } from '@/constants/techStack';
 import { strengths } from '@/constants/strengths';
+import TechIconsMarquee from '../ui/TechIconsMarquee';
 
 export default function About() {
     const t = useTranslations('about');
@@ -15,7 +16,7 @@ export default function About() {
                     {t('About')} <span className="text-(--principal-1)">{t('me')}.</span>
                 </SectionTitle>
 
-                <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <div className="grid md:grid-cols-2 gap-12">
                     {/* Description */}
                     <div>
                         <h3 className="text-2xl font-bold mb-6">
@@ -56,8 +57,8 @@ export default function About() {
                     </div>
 
                 </div>
-
                 {/* Strengths */}
+                <TechIconsMarquee />
                 <div>
                     <h3 className="text-2xl font-bold mb-8 text-center">
                         {t('strengths')}

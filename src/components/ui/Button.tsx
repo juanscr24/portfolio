@@ -8,6 +8,7 @@ interface ButtonProps {
     onClick?: () => void;
     href?: string;
     className?: string;
+    target?: string; // <--- agregamos target opcional
 }
 
 export default function Button({
@@ -16,7 +17,8 @@ export default function Button({
     size = 'md',
     onClick,
     href,
-    className = ''
+    className = '',
+    target = '_blank' // <--- valor predeterminado
 }: ButtonProps) {
     const baseStyles = 'font-semibold transition-all duration-300 inline-block text-center';
 
@@ -36,7 +38,7 @@ export default function Button({
 
     if (href) {
         return (
-            <Link target="_blank" href={href} className={classes}>
+            <Link target={target} href={href} className={classes}>
                 {children}
             </Link>
         );
