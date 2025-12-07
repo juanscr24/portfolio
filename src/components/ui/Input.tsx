@@ -34,6 +34,7 @@ export default function Input({
 
     return (
         <input
+            required
             type={type}
             name={name}
             placeholder={placeholder}

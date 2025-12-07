@@ -49,8 +49,7 @@ export default function Experience() {
                                             <ul className="space-y-2">
                                                 {(t.raw(exp.achievements) as string[]).map((achievement, idx) => (
                                                     <li key={idx} className="flex items-start text-(--text-3)">
-                                                        <span className="text-(--principal-1) mr-2 mt-1">▹</span>
-                                                        <span>{achievement}</span>
+                                                        <span>▹ {achievement}</span>
                                                     </li>
                                                 ))}
                                             </ul>

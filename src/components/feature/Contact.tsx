@@ -165,7 +165,7 @@ export default function Contact() {
                                 <Input type="textarea" placeholder={t('form_message_placeholder')} name="message" rows={6} />
                             </div>
 
-                            <Button variant="primary" className="w-full" size="lg">
+                            <Button type='submit' target='' variant="primary" className="w-full" size="lg">
                                 {t('form_submit')}
                             </Button>
                         </form>

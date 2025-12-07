@@ -8,10 +8,12 @@ interface ButtonProps {
     onClick?: () => void;
     href?: string;
     className?: string;
+    type?: 'button' | 'submit' | 'reset';
     target?: string; // <--- agregamos target opcional
 }
 
 export default function Button({
+    type = 'button',
     children,
     variant = 'primary',
     size = 'md',
@@ -45,7 +47,7 @@ export default function Button({
     }
 
     return (
-        <button onClick={onClick} className={classes}>
+        <button type={type} onClick={onClick} className={classes}>
             {children}
         </button>
     );

@@ -11,7 +11,7 @@ export default function Services() {
         <section id="services" className="bg-(--base-2) text-(--text-1) py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
-                    {t('my')} <span className="text-[--principal-1]">{t('services')}.</span>
+                    {t('my')} <span className="text-(--principal-1)">{t('services')}.</span>
                 </SectionTitle>
 
                 <p className="text-(--text-2) text-xl text-center mb-16 max-w-3xl mx-auto">
@@ -29,7 +29,7 @@ export default function Services() {
                             <ul className="space-y-2 mb-4">
                                 {(t.raw(service.features) as string[]).map((feature, idx) => (
                                     <li key={idx} className="flex items-start text-sm text-(--text-2)">
-                                        <span className="text-[--principal-1] mr-2">✓</span>
+                                        <span className="text-(--principal-1) mr-2">✓</span>
                                         {feature}
                                     </li>
                                 ))}
@@ -39,7 +39,7 @@ export default function Services() {
                             <div className="pt-4 border-t border-(--base-3)">
                                 <div className="flex flex-wrap gap-2">
                                     {(t.raw(service.technologies) as string[]).map((tech, idx) => (
-                                        <span key={idx} className="bg-(--base-3) px-2 py-1 rounded text-xs text-(--text-2)">
+                                        <span key={idx} className="bg-(--principal-1) px-2 py-1 rounded text-xs text-(--text-2)">
                                             {tech}
                                         </span>
                                     ))}
