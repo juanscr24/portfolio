@@ -1,74 +1,21 @@
-import React from 'react';
+'use client';
 import SectionTitle from '../ui/SectionTitle';
 import Card from '../ui/Card';
+import { useTranslations } from 'next-intl';
+import { testimonials } from '@/constants/testimonials';
 
 export default function Testimonials() {
-    const testimonials = [
-        {
-            name: 'María García',
-            role: 'CEO at Tech Startup',
-            company: 'InnovateTech',
-            image: '/testimonials/maria.jpg',
-            rating: 5,
-            text: 'Juan es un desarrollador excepcional. Entregó nuestro proyecto a tiempo y superó todas nuestras expectativas. Su atención al detalle y capacidad para resolver problemas complejos es impresionante.',
-            project: 'E-commerce Platform'
-        },
-        {
-            name: 'Carlos Rodríguez',
-            role: 'Product Manager',
-            company: 'Digital Solutions',
-            image: '/testimonials/carlos.jpg',
-            rating: 5,
-            text: 'Trabajar con Juan fue una experiencia fantástica. No solo tiene habilidades técnicas sólidas, sino que también comprende las necesidades del negocio y propone soluciones innovadoras.',
-            project: 'SaaS Dashboard'
-        },
-        {
-            name: 'Ana Martínez',
-            role: 'Lead Designer',
-            company: 'Creative Agency',
-            image: '/testimonials/ana.jpg',
-            rating: 5,
-            text: 'La colaboración con Juan fue perfecta. Tradujo nuestros diseños a código de manera impecable y siempre estuvo abierto a feedback. Altamente recomendado para cualquier proyecto web.',
-            project: 'Portfolio Website'
-        },
-        {
-            name: 'David López',
-            role: 'CTO',
-            company: 'FinTech Solutions',
-            image: '/testimonials/david.jpg',
-            rating: 5,
-            text: 'Juan demostró un profundo conocimiento técnico en el desarrollo de nuestra aplicación. Su código es limpio, bien documentado y fácil de mantener. Un profesional de primer nivel.',
-            project: 'Financial Dashboard'
-        },
-        {
-            name: 'Laura Sánchez',
-            role: 'Founder',
-            company: 'SmallBiz Co.',
-            image: '/testimonials/laura.jpg',
-            rating: 5,
-            text: 'Como startup pequeña, necesitábamos alguien confiable que entendiera nuestras limitaciones. Juan fue flexible, comunicativo y entregó exactamente lo que necesitábamos dentro de nuestro presupuesto.',
-            project: 'Business Website'
-        },
-        {
-            name: 'Roberto Díaz',
-            role: 'Tech Lead',
-            company: 'Enterprise Corp',
-            image: '/testimonials/roberto.jpg',
-            rating: 5,
-            text: 'Excelente trabajo en la refactorización de nuestro código legacy. Juan identificó y solucionó múltiples problemas de rendimiento. Su experiencia en arquitectura de software es invaluable.',
-            project: 'Legacy Code Refactoring'
-        }
-    ];
+    const t = useTranslations('testimonial');
 
     return (
         <section id="testimonials" className="bg-(--base-1) text-(--text-1) py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
-                    Client <span className="text-(--principal-1)">Testimonials.</span>
+                    {t('Client')} <span className="text-(--principal-1)">{t('testimonial')}</span>
                 </SectionTitle>
 
                 <p className="text-(--text-2) text-xl text-center mb-16 max-w-3xl mx-auto">
-                    Lo que dicen clientes y colegas sobre trabajar conmigo.
+                    {t('description')}
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -102,8 +49,6 @@ export default function Testimonials() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold">{testimonial.name}</h4>
-                                    <p className="text-sm text-(--text-2)">{testimonial.role}</p>
-                                    <p className="text-xs text-(--principal-1)">{testimonial.company}</p>
                                 </div>
                             </div>
                         </Card>
@@ -113,18 +58,19 @@ export default function Testimonials() {
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
                     <div className="text-center">
-                        <div className="text-4xl font-bold text-(--principal-1) mb-2">50+</div>
-                        <p className="text-(--text-2)">Proyectos Completados</p>
+                        <div className="text-4xl font-bold text-(--principal-1) mb-2">12+</div>
+                        <p className="text-(--text-2)">{t('stats.completed')}</p>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl font-bold text-(--principal-1) mb-2">30+</div>
-                        <p className="text-(--text-2)">Clientes Satisfechos</p>
+                        <div className="text-4xl font-bold text-(--principal-1) mb-2">8+</div>
+                        <p className="text-(--text-2)">{t('stats.clients')}</p>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl font-bold text-(--principal-1) mb-2">100%</div>
-                        <p className="text-(--text-2)">Recomendación</p>
+                        <div className="text-4xl font-bold text-(--principal-1) mb-2">95%</div>
+                        <p className="text-(--text-2)">{t('stats.satisfaction')}</p>
                     </div>
                 </div>
+
             </div>
         </section>
     );

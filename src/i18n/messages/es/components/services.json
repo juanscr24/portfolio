@@ -1,0 +1,57 @@
+{
+    "my": "Mis",
+    "services": "Servicios",
+    "description": "Ofrezco servicios profesionales de desarrollo web para llevar tu proyecto al siguiente nivel.",
+    "service_title_1": "Desarrollo Web Full Stack",
+    "service_desc_1": "Desarrollo de aplicaciones web completas, desde el frontend hasta el backend, con soluciones funcionales y escalables para proyectos pequeños y medianos.",
+    "service_features_1": [
+        "Frontend moderno y responsivo",
+        "Backend funcional",
+        "Integración de APIs",
+        "Soporte en despliegue"
+    ],
+    "service_tech_1": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express"
+    ],
+    "service_title_2": "Diseño UI/UX",
+    "service_desc_2": "Creación de interfaces intuitivas y atractivas que mejoran la experiencia del usuario y su interacción con la aplicación.",
+    "service_features_2": [
+        "Wireframes y prototipos",
+        "Sistema de diseño",
+        "Diseño responsivo",
+        "Optimización de UX"
+    ],
+    "service_tech_2": [
+        "Figma",
+        "Tailwind CSS",
+        "Material-UI"
+    ],
+    "service_title_3": "Desarrollo de APIs",
+    "service_desc_3": "Diseño e implementación de APIs REST para aplicaciones web, con autenticación y documentación adecuada.",
+    "service_features_3": [
+        "APIs REST",
+        "Documentación",
+        "Autenticación y seguridad",
+        "Integración con frontend"
+    ],
+    "service_tech_3": [
+        "Node.js",
+        "Express"
+    ],
+    "service_title_4": "Mantenimiento y Mejoras",
+    "service_desc_4": "Actualización y optimización de aplicaciones web existentes, agregando nuevas funcionalidades y mejorando el rendimiento.",
+    "service_features_4": [
+        "Corrección de errores",
+        "Actualización de dependencias",
+        "Nuevas funcionalidades",
+        "Optimización de código"
+    ],
+    "service_tech_4": [
+        "Refactorización",
+        "Pruebas",
+        "Soporte en despliegue"
+    ]
+}
