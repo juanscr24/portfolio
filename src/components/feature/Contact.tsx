@@ -1,10 +1,13 @@
-import React from 'react';
+'use client'
 import SectionTitle from '../ui/SectionTitle';
 import Card from '../ui/Card';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Contact() {
+    const t = useTranslations('contact');
     const contactInfo = [
         {
             icon: (
@@ -13,8 +16,8 @@ export default function Contact() {
                 </svg>
             ),
             title: 'Email',
-            value: 'juan.rodriguez@email.com',
-            link: 'mailto:juan.rodriguez@email.com'
+            value: 'juanscr24@gmail.com',
+            link: 'mailto:juanscr24@gmail.com'
         },
         {
             icon: (
@@ -23,8 +26,8 @@ export default function Contact() {
                 </svg>
             ),
             title: 'WhatsApp',
-            value: '+57 300 123 4567',
-            link: 'https://wa.me/573001234567'
+            value: '+57 301 208 4032',
+            link: 'https://wa.me/573012084032'
         },
         {
             icon: (
@@ -33,7 +36,7 @@ export default function Contact() {
                 </svg>
             ),
             title: 'Location',
-            value: 'Medellín, Colombia',
+            value: 'Barranquilla, Colombia',
             link: null
         }
     ];
@@ -56,36 +59,26 @@ export default function Contact() {
                 </svg>
             ),
             url: 'https://linkedin.com/in/juanscr24'
-        },
-        {
-            name: 'Twitter',
-            icon: (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                </svg>
-            ),
-            url: 'https://twitter.com/juanscr24'
         }
     ];
 
     return (
-        <section id="contact" className="bg-(--base-1) text-white py-20">
+        <section id="contact" className="bg-(--base-2) text-white py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
-                    Get In <span className="text-(--principal-1)">Touch.</span>
+                    {t('get_in')} <span className="text-(--principal-1)">{t('touch')}.</span>
                 </SectionTitle>
 
                 <p className="text-(--text-2) text-xl text-center mb-16 max-w-3xl mx-auto">
-                    ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a hacerlo realidad.
+                    {t('description')}
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <h3 className="text-2xl font-bold mb-6">{t('contact_info_title')}</h3>
                         <p className="text-(--text-2) mb-8">
-                            Estoy disponible para proyectos freelance, colaboraciones o simplemente para una
-                            charla sobre tecnología. No dudes en contactarme.
+                            {t('contact_info_desc')}
                         </p>
 
                         {/* Contact Methods */}
@@ -96,11 +89,11 @@ export default function Contact() {
                                         {info.icon}
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold mb-1">{info.title}</h4>
+                                        <h4 className="font-semibold mb-1">{t(info.title.toLowerCase())}</h4>
                                         {info.link ? (
-                                            <a href={info.link} className="text-(--text-2) hover:text-[#FF0080] transition-colors">
+                                            <Link target="_blank" href={info.link} className="text-(--text-2) hover:text-(--principal-1) transition-colors cursor-pointer">
                                                 {info.value}
-                                            </a>
+                                            </Link>
                                         ) : (
                                             <p className="text-(--text-2)">{info.value}</p>
                                         )}
@@ -111,10 +104,10 @@ export default function Contact() {
 
                         {/* Social Links */}
                         <div>
-                            <h4 className="font-semibold mb-4">Encuéntrame en:</h4>
+                            <h4 className="font-semibold mb-4">{t('find_me')}</h4>
                             <div className="flex gap-4">
                                 {socialLinks.map((social, index) => (
-                                    <a
+                                    <Link
                                         key={index}
                                         href={social.url}
                                         target="_blank"
@@ -123,7 +116,7 @@ export default function Contact() {
                                         aria-label={social.name}
                                     >
                                         {social.icon}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -132,48 +125,48 @@ export default function Contact() {
                         <div className="mt-8 p-6 bg-(--base-2) rounded-lg border border-(--base-2)">
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                <span className="font-semibold text-green-500">Disponible para proyectos</span>
+                                <span className="font-semibold text-green-500">{t('availability_title')}</span>
                             </div>
                             <p className="text-sm text-(--text-2)">
-                                Actualmente aceptando nuevos proyectos freelance. Respondo en 24 horas.
+                                {t('availability_desc')}
                             </p>
                         </div>
                     </div>
 
                     {/* Contact Form */}
                     <Card variant="dark" className="border border-(--base-2)">
-                        <h3 className="text-2xl font-bold mb-6">Envíame un mensaje</h3>
+                        <h3 className="text-2xl font-bold mb-6">{t('form_title')}</h3>
                         <form className="space-y-4">
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                    Nombre
+                                    {t('form_name')}
                                 </label>
-                                <Input type="text" placeholder="Tu nombre" name="name" />
+                                <Input type="text" placeholder={t('form_name_placeholder')} name="name" />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                    Email
+                                    {t('form_email')}
                                 </label>
-                                <Input type="email" placeholder="tu@email.com" name="email" />
+                                <Input type="email" placeholder={t('form_email_placeholder')} name="email" />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                    Asunto
+                                    {t('form_subject')}
                                 </label>
-                                <Input type="text" placeholder="¿En qué puedo ayudarte?" name="subject" />
+                                <Input type="text" placeholder={t('form_subject_placeholder')} name="subject" />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                    Mensaje
+                                    {t('form_message')}
                                 </label>
-                                <Input type="textarea" placeholder="Cuéntame sobre tu proyecto..." name="message" rows={6} />
+                                <Input type="textarea" placeholder={t('form_message_placeholder')} name="message" rows={6} />
                             </div>
 
                             <Button variant="primary" className="w-full" size="lg">
-                                Enviar Mensaje
+                                {t('form_submit')}
                             </Button>
                         </form>
                     </Card>

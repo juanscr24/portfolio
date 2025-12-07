@@ -1,15 +1,11 @@
-export default function Navbar() {
-    const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Experience', href: '#experience' },
-        { name: 'Education ', href: '#education' },
-        { name: 'Services', href: '#services' },
-        { name: 'Contact', href: '#contact' }
-    ];
+'use client'
+import { navLinks } from "@/constants/navbarLinks";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
+export default function Navbar() {
+    const t = useTranslations('navbar');
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-(--base-1) bg-opacity-90 backdrop-blur-sm border-b border-(--base-3)">
             <div className="container mx-auto px-6">
@@ -23,14 +19,15 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link, index) => (
-                            <a
+                            <Link
                                 key={index}
                                 href={link.href}
                                 className="text-(--text-2) hover:text-(--principal-1) transition-colors text-sm font-medium"
                             >
-                                {link.name}
-                            </a>
+                                {t(link.name)}
+                            </Link>
                         ))}
+                        <LanguageSwitcher />
                     </div>
 
                     {/* Mobile Menu Button */}

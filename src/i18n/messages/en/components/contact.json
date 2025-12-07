@@ -1,0 +1,23 @@
+{
+    "get_in": "Get In",
+    "touch": "Touch",
+    "description": "Have a project in mind? Let's talk about how I can help you make it a reality.",
+    "contact_info_title": "Contact Information",
+    "contact_info_desc": "I'm available for freelance projects, collaborations or just a chat about technology. Feel free to contact me.",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Location",
+    "find_me": "Find me on:",
+    "availability_title": "Available for projects",
+    "availability_desc": "Currently accepting new freelance projects. I respond within 24 hours.",
+    "form_title": "Send me a message",
+    "form_name": "Name",
+    "form_name_placeholder": "Your name",
+    "form_email": "Email",
+    "form_email_placeholder": "your@email.com",
+    "form_subject": "Subject",
+    "form_subject_placeholder": "How can I help you?",
+    "form_message": "Message",
+    "form_message_placeholder": "Tell me about your project...",
+    "form_submit": "Send Message"
+}

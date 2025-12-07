@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 interface ButtonProps {
@@ -35,9 +36,9 @@ export default function Button({
 
     if (href) {
         return (
-            <a href={href} className={classes}>
+            <Link target="_blank" href={href} className={classes}>
                 {children}
-            </a>
+            </Link>
         );
     }
 

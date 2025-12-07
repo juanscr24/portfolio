@@ -1,0 +1,63 @@
+{
+    "work": "Work",
+    "experience": "Experience",
+    "description": "My professional journey building web solutions for various companies and clients.",
+    "achievements": "Achievements",
+    "technologies": "Technologies",
+    "role_1": "Full Stack Developer Trainee",
+    "company_1": "Riwi",
+    "period_1": "2025 – Present",
+    "type_1": "Full-time",
+    "achievements_1": [
+        "Developed full web applications using React, Node.js, and Express following MVC architecture and clean code practices.",
+        "Built SPAs with CRUD operations, authentication, role-based access control, route protection, and session persistence.",
+        "Implemented modern and responsive interfaces using React, Tailwind, and scalable UI patterns.",
+        "Worked in Agile/Scrum environments, collaborating with multidisciplinary teams and delivering features in iterative sprints."
+    ],
+    "technologies_1": [
+        "React",
+        "Node.js",
+        "Express",
+        "JavaScript",
+        "Tailwind",
+        "MySQL",
+        "PostgreSQL"
+    ],
+    "role_2": "Full Stack Developer",
+    "company_2": "Freelance",
+    "period_2": "2024 – 2025",
+    "type_2": "Freelance",
+    "achievements_2": [
+        "Built and deployed real-world applications such as PetMatch and GreenPath Market, integrating Mercado Pago and efficient REST APIs.",
+        "Developed TaskLancer (SaaS) using Next.js and Prisma, implementing authentication with NextAuth and role-based access control.",
+        "Implemented scalable full-stack architectures with React, TypeScript, Express, and PostgreSQL, prioritizing security (JWT) and performance.",
+        "Managed end-to-end project workflows, gathering requirements and delivering tailored software solutions."
+    ],
+    "technologies_2": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Express",
+        "MongoDB"
+    ],
+    "role_3": "Web Developer",
+    "company_3": "Personal Projects & Practice",
+    "period_3": "2023 – 2024",
+    "type_3": "Self-Learning",
+    "achievements_3": [
+        "Built over 10 practical projects to strengthen frontend and backend skills.",
+        "Developed REST APIs with Node.js and Express and practiced both SQL and NoSQL databases.",
+        "Used Git and GitHub for version control and collaborative workflows.",
+        "Experimented with UI/UX design using Figma, Tailwind, and reusable components."
+    ],
+    "technologies_3": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MySQL",
+        "MongoDB",
+        "Git"
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "featured": "Featured",
+    "projects": "Projects",
+    "description": "Here are some of my real-world full stack projects that showcase my ability to build scalable, modern and user-focused applications.",
+    "key_features": "Key Features:",
+    "view_code": "View Code",
+    "live_demo": "Live Demo",
+    "project_title_1": "PetMatch - Pet Adoption Platform",
+    "project_desc_1": "A full stack platform for pet adoption with authentication, protected routes, match system and pet management.",
+    "project_features_1": [
+        "Role-based authentication (Admin / User)",
+        "Pet registry and adoption match system",
+        "Admin dashboard with real statistics",
+        "Responsive UI built with React and Tailwind"
+    ],
+    "project_role_1": "Full Stack Developer",
+    "project_title_2": "GreenPath Market - Eco-Friendly Store",
+    "project_desc_2": "E-commerce platform with secure payments, product management and automated order system.",
+    "project_features_2": [
+        "Integration with Mercado Pago",
+        "Product and inventory management",
+        "Secure checkout with validation",
+        "REST API optimized with Express"
+    ],
+    "project_role_2": "Full Stack Developer",
+    "project_title_3": "TaskLancer (SaaS) - Freelance Management",
+    "project_desc_3": "SaaS platform for freelancers with authentication, role system, project management and dashboards.",
+    "project_features_3": [
+        "Authentication with NextAuth",
+        "Role-based access control",
+        "Project and task management",
+        "Built with Next.js, Prisma and PostgreSQL"
+    ],
+    "project_role_3": "Full Stack Developer",
+    "project_title_4": "SkillSwap - Skills Exchange Platform",
+    "project_desc_4": "A platform where users can exchange skills, connect with others, schedule sessions and manage learning categories.",
+    "project_features_4": [
+        "User profiles with skill categories",
+        "Skills exchange request system",
+        "Messaging and session scheduling",
+        "Built with React, Node.js and PostgreSQL"
+    ],
+    "project_role_4": "Full Stack Developer"
+}
