@@ -2,6 +2,7 @@
 import Button from '../ui/Button';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { profile_image } from '../../../public/images';
 
 export default function Hero() {
     const t = useTranslations('hero');
@@ -51,7 +52,7 @@ export default function Hero() {
                             <div className="relative z-10 w-full h-full bg-linear-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden border-4 border-(--principal-1)">
                                 <div className="w-full h-full flex items-center justify-center text-(--text-2)">
                                     {/* Replace with actual image */}
-                                    <Image src={'/profile_img.png'} alt='Foto de perfil' height={1000} width={1000} />
+                                    <Image src={profile_image} alt='Foto de perfil' height={1000} width={1000} />
                                 </div>
                             </div>
                         </div>

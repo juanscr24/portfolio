@@ -2,6 +2,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { navLinks } from '@/constants/navbarLinks';
+import Link from 'next/link';
 
 export default function Footer() {
     const t = useTranslations('footer');
@@ -29,9 +30,9 @@ export default function Footer() {
                         <ul className="space-y-2">
                             {navLinks.slice(0, 4).map((link, index) => (
                                 <li key={index}>
-                                    <a href={link.href} className="text-(--text-2) hover:text-(--principal-1) transition-colors">
+                                    <Link href={link.href} className="text-(--text-2) hover:text-(--principal-1) transition-colors">
                                         {tNav(link.name)}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -42,14 +43,14 @@ export default function Footer() {
                         <h4 className="font-bold mb-4">{t('follow_me')}</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="https://github.com/juanscr24" target="_blank" rel="noopener noreferrer" className="text-(--text-2) hover:text-(--principal-1) transition-colors">
+                                <Link href="https://github.com/juanscr24" target="_blank" rel="noopener noreferrer" className="text-(--text-2) hover:text-(--principal-1) transition-colors">
                                     GitHub
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="https://linkedin.com/in/juanscr24" target="_blank" rel="noopener noreferrer" className="text-(--text-2) hover:text-(--principal-1) transition-colors">
+                                <Link href="https://linkedin.com/in/juanscr24" target="_blank" rel="noopener noreferrer" className="text-(--text-2) hover:text-(--principal-1) transition-colors">
                                     LinkedIn
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

@@ -4,6 +4,7 @@ import Card from '../ui/Card';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Contact() {
     const t = useTranslations('contact');
@@ -90,9 +91,9 @@ export default function Contact() {
                                     <div>
                                         <h4 className="font-semibold mb-1">{t(info.title.toLowerCase())}</h4>
                                         {info.link ? (
-                                            <a target="_blank" href={info.link} className="text-(--text-2) hover:text-(--principal-1) transition-colors cursor-pointer">
+                                            <Link target="_blank" href={info.link} className="text-(--text-2) hover:text-(--principal-1) transition-colors cursor-pointer">
                                                 {info.value}
-                                            </a>
+                                            </Link>
                                         ) : (
                                             <p className="text-(--text-2)">{info.value}</p>
                                         )}
@@ -106,7 +107,7 @@ export default function Contact() {
                             <h4 className="font-semibold mb-4">{t('find_me')}</h4>
                             <div className="flex gap-4">
                                 {socialLinks.map((social, index) => (
-                                    <a
+                                    <Link
                                         key={index}
                                         href={social.url}
                                         target="_blank"
@@ -115,7 +116,7 @@ export default function Contact() {
                                         aria-label={social.name}
                                     >
                                         {social.icon}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

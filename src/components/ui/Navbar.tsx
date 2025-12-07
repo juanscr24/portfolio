@@ -2,6 +2,7 @@
 import { navLinks } from "@/constants/navbarLinks";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function Navbar() {
     const t = useTranslations('navbar');
@@ -18,13 +19,13 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link, index) => (
-                            <a
+                            <Link
                                 key={index}
                                 href={link.href}
                                 className="text-(--text-2) hover:text-(--principal-1) transition-colors text-sm font-medium"
                             >
                                 {t(link.name)}
-                            </a>
+                            </Link>
                         ))}
                         <LanguageSwitcher />
                     </div>
