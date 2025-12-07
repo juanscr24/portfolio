@@ -80,7 +80,7 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="bg-(--base-1) text-(--text-1) py-20">
+        <section id="services" className="bg-(--base-2) text-(--text-1) py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     My <span className="text-[--principal-1]">Services.</span>
@@ -93,7 +93,7 @@ export default function Services() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <Card key={index} variant="dark" className="hover:border-[--principal-1] bg-(--base-2) border-2 border-transparent transition-all group">
+                        <Card key={index} className="hover:border-[--principal-1] bg-(--base-2) border-2 border-transparent transition-all group">
                             <div className="text-5xl mb-4">{service.icon}</div>
                             <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                             <p className="text-(--text-2) mb-4">{service.description}</p>

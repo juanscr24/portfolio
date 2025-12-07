@@ -69,7 +69,7 @@ export default function Contact() {
     ];
 
     return (
-        <section id="contact" className="bg-(--base-1) text-white py-20">
+        <section id="contact" className="bg-(--base-2) text-white py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     Get In <span className="text-(--principal-1)">Touch.</span>

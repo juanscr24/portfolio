@@ -61,7 +61,7 @@ export default function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="bg-(--base-2) text-(--text-1) py-20">
+        <section id="testimonials" className="bg-(--base-1) text-(--text-1) py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     Client <span className="text-(--principal-1)">Testimonials.</span>
@@ -73,7 +73,7 @@ export default function Testimonials() {
 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
                     {testimonials.map((testimonial, index) => (
-                        <Card key={index} variant="dark" className="hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
+                        <Card key={index} className="hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
                             {/* Stars */}
                             <div className="flex gap-1 mb-4">
                                 {[...Array(testimonial.rating)].map((_, i) => (

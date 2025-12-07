@@ -1,7 +1,6 @@
 import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/feature/Hero";
 import About from "@/components/feature/About";
-import Skills from "@/components/feature/Skills";
 import Projects from "@/components/feature/Projects";
 import Experience from "@/components/feature/Experience";
 import Education from "@/components/feature/Education";
@@ -18,7 +17,6 @@ export default function Home() {
       <main id="home">
         <Hero />
         <About />
-        <Skills />
         <Projects />
         <Experience />
         <Education />

@@ -57,7 +57,7 @@ export default function Education() {
     ];
 
     return (
-        <section id="education" className="bg-(--base-2) text-(--text-1) py-20">
+        <section id="education" className="bg-(--base-1) text-(--text-1) py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     Education & <span className="text-(--principal-1)">Certifications.</span>
@@ -70,7 +70,7 @@ export default function Education() {
                 {/* Main Education Cards */}
                 <div className="grid md:grid-cols-2 gap-6 mb-16">
                     {education.map((item, index) => (
-                        <Card key={index} variant="dark" className="hover:border-(--principal-1) border-2 border-transparent transition-all">
+                        <Card key={index} className="hover:border-(--principal-1) border-2 border-transparent transition-all">
                             <div className="flex items-start gap-4">
                                 <div className="text-5xl">{item.icon}</div>
                                 <div className="flex-1">

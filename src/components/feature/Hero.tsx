@@ -1,8 +1,10 @@
-import React from 'react';
+'use client'
 import Button from '../ui/Button';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+    const t = useTranslations('hero');
     return (
         <section className="min-h-screen bg-(--base-1) text-(--text-1) flex items-center">
             <div className="container mx-auto px-6 py-20">
@@ -11,30 +13,30 @@ export default function Hero() {
                     <div>
                         <div className="mb-6">
                             <span className="text-(--principal-1) text-lg font-semibold uppercase tracking-wider">
-                                Bienvenido a mi Portafolio
+                                {t('title')}
                             </span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                            Juan Sebastián
+                            Juan Sebastian
                             <br />
                             <span className="text-(--principal-1)">Cardona</span>
                         </h1>
 
                         <h2 className="text-3xl md:text-4xl text-(--text-2) mb-6">
-                            Full Stack Developer
+                            {t('subtitle')}
                         </h2>
 
                         <p className="text-xl text-(--text-3) mb-8 max-w-lg">
-                            Construyo soluciones web rápidas, modernas y escalables con las mejores tecnologías del mercado.
+                            {t('description')}
                         </p>
 
                         <div className="flex flex-wrap gap-4">
                             <Button variant="primary" size="lg" href="#contact">
-                                Contact Me
+                                {t('button')}
                             </Button>
                             <Button variant="outline" size="lg" href="/cv.pdf">
-                                Download CV
+                                {t('button-2')}
                             </Button>
                         </div>
                     </div>

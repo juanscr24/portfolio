@@ -68,7 +68,7 @@ export default function Projects() {
     ];
 
     return (
-        <section id="projects" className="bg-[#0A0A0A] text-white py-20">
+        <section id="projects" className="bg-(--base-1) text-white py-20">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     Featured <span className="text-(--principal-1)">Projects.</span>
@@ -81,7 +81,7 @@ export default function Projects() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
-                        <Card key={index} variant="dark" className="overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all">
+                        <Card key={index} className="overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all">
                             {/* Project Image */}
                             <div className="relative h-64 bg-linear-to-br from-gray-800 to-gray-900 mb-6 rounded-lg overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center text-gray-600">
