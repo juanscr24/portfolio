@@ -10,20 +10,31 @@ interface LocaleProviderProps {
 
 export function LocaleProvider({ children }: LocaleProviderProps) {
     const { locale, messages } = useLocaleStore()
-    const [mounted, setMounted] = useState(false)
+    const [isHydrated, setIsHydrated] = useState(false)
 
-    // Evitar hydration mismatch
+    // Esperar a que zustand hidrate el estado desde localStorage
     useEffect(() => {
-        setMounted(true)
+        // Verificar si zustand ya hidrato el estado
+        const checkHydration = () => {
+            const stored = localStorage.getItem('locale-storage')
+            if (stored) {
+                const { state } = JSON.parse(stored)
+                if (state.locale) {
+                    useLocaleStore.setState({
+                        locale: state.locale,
+                        messages: state.locale === 'es' ? require('@/i18n/messages/es').default : require('@/i18n/messages/en').default
+                    })
+                }
+            }
+            setIsHydrated(true)
+        }
+
+        checkHydration()
     }, [])
 
-    if (!mounted) {
-        // Renderizar con valores por defecto en el servidor
-        return (
-            <NextIntlClientProvider messages={messages} locale={locale}>
-                {children}
-            </NextIntlClientProvider>
-        )
+    // Mostrar loader mientras hidrata
+    if (!isHydrated) {
+        return null
     }
 
     return (
