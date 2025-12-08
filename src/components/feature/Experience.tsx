@@ -6,7 +6,7 @@ import { experiences } from '@/constants/experiences';
 export default function Experience() {
     const t = useTranslations('experience');
     return (
-        <section id="experience" className="bg-(--base-2) text-(--text-1) py-20">
+        <section id="experience" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     {t('work')} <span className="text-(--principal-1)">{t('experience')}.</span>

@@ -8,7 +8,7 @@ export default function Services() {
     const t = useTranslations('services');
 
     return (
-        <section id="services" className="bg-(--base-2) text-(--text-1) py-20">
+        <section id="services" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     {t('my')} <span className="text-(--principal-1)">{t('services')}.</span>

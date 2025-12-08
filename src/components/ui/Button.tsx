@@ -9,7 +9,8 @@ interface ButtonProps {
     href?: string;
     className?: string;
     type?: 'button' | 'submit' | 'reset';
-    target?: string; // <--- agregamos target opcional
+    target?: string;
+    disabled?: boolean;
 }
 
 export default function Button({
@@ -20,14 +21,15 @@ export default function Button({
     onClick,
     href,
     className = '',
-    target = '_blank' // <--- valor predeterminado
+    target = '_blank',
+    disabled = false
 }: ButtonProps) {
     const baseStyles = 'font-semibold transition-all duration-300 inline-block text-center';
 
     const variants = {
-        primary: 'bg-(--principal-1) hover:bg-(--principal-2) text-white',
-        secondary: 'bg-white hover:bg-gray-100 text-black',
-        outline: 'border-2 border-(--principal-1) text-(--principal-1) hover:bg-(--principal-1) hover:text-white'
+        primary: 'bg-(--principal-1) hover:bg-(--principal-2) text-white disabled:opacity-50 disabled:cursor-not-allowed',
+        secondary: 'bg-white hover:bg-gray-100 text-black disabled:opacity-50 disabled:cursor-not-allowed',
+        outline: 'border-2 border-(--principal-1) text-(--principal-1) hover:bg-(--principal-1) hover:text-white disabled:opacity-50 disabled:cursor-not-allowed'
     };
 
     const sizes = {
@@ -47,7 +49,7 @@ export default function Button({
     }
 
     return (
-        <button type={type} onClick={onClick} className={classes}>
+        <button type={type} onClick={onClick} disabled={disabled} className={classes}>
             {children}
         </button>
     );

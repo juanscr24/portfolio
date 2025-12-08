@@ -8,11 +8,11 @@ export default function Hero() {
     const t = useTranslations('hero');
     return (
         <section className="min-h-screen bg-(--base-1) text-(--text-1) flex items-center">
-            <div className="container mx-auto px-6 py-20">
+            <div className="container mx-auto px-6 py-20 max-md:py-10 max-sm:py-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div>
-                        <div className="mb-2 max-md:mt-4">
+                        <div className="mb-2 max-md:mt-16 max-lg:mt-20">
                             <span className="text-(--principal-1) text-lg font-semibold uppercase tracking-wider">
                                 {t('title')}
                             </span>

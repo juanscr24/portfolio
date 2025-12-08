@@ -10,7 +10,7 @@ export default function Education() {
 
 
     return (
-        <section id="education" className="bg-(--base-1) text-(--text-1) py-20">
+        <section id="education" className="bg-(--base-1) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     {t('education')} & <span className="text-(--principal-1)">{t('certifications')}.</span>

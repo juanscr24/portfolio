@@ -1,13 +1,27 @@
 'use client'
+import { useState, useRef } from 'react';
 import SectionTitle from '../ui/SectionTitle';
 import Card from '../ui/Card';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Contact() {
     const t = useTranslations('contact');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<{
+        type: 'success' | 'error' | null;
+        message: string;
+    }>({ type: null, message: '' });
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const contactInfo = [
         {
             icon: (
@@ -16,8 +30,8 @@ export default function Contact() {
                 </svg>
             ),
             title: 'Email',
-            value: 'juanscr24@gmail.com',
-            link: 'mailto:juanscr24@gmail.com'
+            value: 'devpoint.hub@gmail.com',
+            link: 'mailto:devpoint.hub@gmail.com'
         },
         {
             icon: (
@@ -26,8 +40,8 @@ export default function Contact() {
                 </svg>
             ),
             title: 'WhatsApp',
-            value: '+57 301 208 4032',
-            link: 'https://wa.me/573012084032'
+            value: '+57 315 058 1737',
+            link: 'https://wa.me/573150581737'
         },
         {
             icon: (
@@ -62,8 +76,68 @@ export default function Contact() {
         }
     ];
 
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        // Obtener token de reCAPTCHA
+        const recaptchaToken = recaptchaRef.current?.getValue();
+
+        if (!recaptchaToken) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Por favor, completa la verificación reCAPTCHA'
+            });
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitStatus({ type: null, message: '' });
+
+        try {
+
+            // Enviar formulario
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    recaptchaToken
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Error al enviar el mensaje');
+            }
+
+            // Éxito
+            setSubmitStatus({
+                type: 'success',
+                message: t('form_success') || 'Mensaje enviado exitosamente'
+            });
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            recaptchaRef.current?.reset();
+
+        } catch (error) {
+            setSubmitStatus({
+                type: 'error',
+                message: error instanceof Error ? error.message : 'Error al enviar el mensaje'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
-        <section id="contact" className="bg-(--base-2) text-white py-20">
+        <section id="contact" className="bg-(--base-2) text-white py-20 max-md:py-10 max-sm:py-6">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     {t('get_in')} <span className="text-(--principal-1)">{t('touch')}.</span>
@@ -136,37 +210,91 @@ export default function Contact() {
                     {/* Contact Form */}
                     <Card variant="dark" className="border border-(--base-2)">
                         <h3 className="text-2xl font-bold mb-6">{t('form_title')}</h3>
-                        <form className="space-y-4">
+
+                        {submitStatus.type && (
+                            <div className={`mb-4 p-4 rounded-lg ${submitStatus.type === 'success'
+                                ? 'bg-green-500/20 text-green-500 border border-green-500'
+                                : 'bg-red-500/20 text-red-500 border border-red-500'
+                                }`}>
+                                {submitStatus.message}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
                                     {t('form_name')}
                                 </label>
-                                <Input type="text" placeholder={t('form_name_placeholder')} name="name" />
+                                <Input
+                                    type="text"
+                                    placeholder={t('form_name_placeholder')}
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
                                     {t('form_email')}
                                 </label>
-                                <Input type="email" placeholder={t('form_email_placeholder')} name="email" />
+                                <Input
+                                    type="email"
+                                    placeholder={t('form_email_placeholder')}
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    required
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
                                     {t('form_subject')}
                                 </label>
-                                <Input type="text" placeholder={t('form_subject_placeholder')} name="subject" />
+                                <Input
+                                    type="text"
+                                    placeholder={t('form_subject_placeholder')}
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleInputChange}
+                                    required
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold mb-2 text-(--text-2)">
                                     {t('form_message')}
                                 </label>
-                                <Input type="textarea" placeholder={t('form_message_placeholder')} name="message" rows={6} />
+                                <Input
+                                    type="textarea"
+                                    placeholder={t('form_message_placeholder')}
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleInputChange}
+                                    rows={6}
+                                    required
+                                />
                             </div>
 
-                            <Button type='submit' target='' variant="primary" className="w-full" size="lg">
-                                {t('form_submit')}
+                            {/* reCAPTCHA Checkbox */}
+                            <div className="flex justify-center">
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                                    theme="dark"
+                                />
+                            </div>
+
+                            <Button
+                                type='submit'
+                                variant="primary"
+                                className="w-full"
+                                size="lg"
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? t('form_sending') || 'Enviando...' : t('form_submit')}
                             </Button>
                         </form>
                     </Card>

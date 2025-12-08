@@ -11,7 +11,7 @@ export default function Projects() {
     const t = useTranslations('projects');
 
     return (
-        <section id="projects" className="bg-(--base-1) text-white py-20">
+        <section id="projects" className="bg-(--base-1) text-white py-20 max-md:py-10 max-sm:py-6">
             <div className="container mx-auto px-6">
                 <SectionTitle>
                     {t('featured')} <span className="text-(--principal-1)">{t('projects')}.</span>
