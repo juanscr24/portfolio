@@ -19,5 +19,7 @@
     "form_subject_placeholder": "¿En qué puedo ayudarte?",
     "form_message": "Mensaje",
     "form_message_placeholder": "Cuéntame sobre tu proyecto...",
-    "form_submit": "Enviar Mensaje"
+    "form_submit": "Enviar Mensaje",
+    "form_sending": "Enviando...",
+    "form_success": "¡Mensaje enviado exitosamente!"
 }

@@ -51,3 +51,22 @@ body {
 
   --gradient: #7000FF;
 }
+
+@keyframes icons-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-icons-marquee {
+  animation: icons-marquee 30s linear infinite;
+  width: max-content;
+}
+
+.animate-icons-marquee:hover {
+  animation-play-state: paused;
+}
