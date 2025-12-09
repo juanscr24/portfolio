@@ -1,6 +1,7 @@
 "use client";
 
 import { icons } from "@/constants/icons";
+import Reveal from "./Reveal";
 
 export default function TechIconsMarquee() {
     return (
@@ -11,7 +12,9 @@ export default function TechIconsMarquee() {
                         key={`${id}-${index}`}
                         className="text-(--text-2) hover:text-(--text-1) transition-colors duration-200 text-5xl max-md:text-4xl"
                     >
-                        <Icon />
+                        <Reveal delay={0.1 * index}>
+                            <Icon />
+                        </Reveal>
                     </div>
                 ))}
             </div>
