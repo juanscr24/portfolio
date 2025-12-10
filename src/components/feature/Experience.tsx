@@ -7,10 +7,9 @@ import Reveal from '../ui/Reveal';
 export default function Experience() {
     const t = useTranslations('experience');
     return (
-        <Reveal delay={0.1}>
-            <section id="experience" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
+        <section id="experience" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                         <SectionTitle>
                             {t('work')} <span className="text-(--principal-1)">{t('experience')}.</span>
                         </SectionTitle>
@@ -19,16 +18,15 @@ export default function Experience() {
                             {t('description')}
                         </p>
                     </Reveal>
-                    <Reveal delay={0.2}>
-                        <div className="max-w-4xl mx-auto">
-                            {/* Timeline */}
-                            <div className="relative">
-                                {/* Line */}
-                                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-linear-to-b from-(--principal-1) to-transparent"></div>
+                    <div className="max-w-4xl mx-auto">
+                        {/* Timeline */}
+                        <div className="relative">
+                            {/* Line */}
+                            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-linear-to-b from-(--principal-1) to-transparent"></div>
 
-                                {experiences.map((exp, index) => (
-                                    <div key={index} className={`relative mb-12 ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
-                                        <Reveal delay={0.3}>
+                            {experiences.map((exp, index) => (
+                                <Reveal key={index} delay={0.2 + (index * 0.1)}>
+                                    <div className={`relative mb-12 ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
 
                                             {/* Timeline dot */}
                                             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-(--principal-1) rounded-full border-4 border-(--base-1) z-10"></div>
@@ -74,14 +72,12 @@ export default function Experience() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Reveal>
                                     </div>
-                                ))}
-                            </div>
+                                </Reveal>
+                            ))}
                         </div>
-                    </Reveal>
-                </div>
-            </section>
-        </Reveal >
+                    </div>
+            </div>
+        </section>
     );
 }

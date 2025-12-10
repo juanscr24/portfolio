@@ -1,6 +1,6 @@
 {
-    "featured": "Destacados",
-    "projects": "Proyectos",
+    "featured": "Proyectos",
+    "projects": "Destacados",
     "description": "Aquí encontrarás algunos de mis proyectos full stack reales que demuestran mi capacidad para construir aplicaciones escalables, modernas y centradas en el usuario.",
     "key_features": "Características clave:",
     "view_code": "Ver Código",

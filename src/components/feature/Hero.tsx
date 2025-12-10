@@ -9,10 +9,9 @@ import Link from 'next/link';
 export default function Hero() {
     const t = useTranslations('hero');
     return (
-        <Reveal delay={0.1}>
-            <section className="min-h-screen bg-(--base-1) text-(--text-1) flex items-center">
-                <div className="container mx-auto px-6 py-20 max-md:py-10 max-sm:py-6">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+        <section className="min-h-screen bg-(--base-1) text-(--text-1) flex items-center">
+            <div className="container mx-auto px-6 py-20 max-md:py-10 max-sm:py-6">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Left Content */}
                         <Reveal delay={0.2}>
                             <div>
@@ -78,6 +77,5 @@ export default function Hero() {
                     </Link>
                 </div>
             </section>
-        </Reveal>
     );
 }

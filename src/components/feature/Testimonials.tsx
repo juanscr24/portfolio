@@ -9,10 +9,9 @@ export default function Testimonials() {
     const t = useTranslations('testimonial');
 
     return (
-        <Reveal delay={0.1}>
-            <section id="testimonials" className="bg-(--base-1) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
+        <section id="testimonials" className="bg-(--base-1) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                         <SectionTitle>
                             {t('Client')} <span className="text-(--principal-1)">{t('testimonial')}</span>
                         </SectionTitle>
@@ -24,8 +23,8 @@ export default function Testimonials() {
 
                     <div className="grid md:grid-cols-3 gap-8 mb-12">
                         {testimonials.map((testimonial, index) => (
-                            <Card key={index} className="hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
-                                <Reveal delay={0.1 * index}>
+                            <Reveal key={index} delay={0.2 + (index * 0.1)}>
+                                <Card className="hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
                                     {/* Stars */}
                                     <div className="flex gap-1 mb-4">
                                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -56,13 +55,13 @@ export default function Testimonials() {
                                             <h4 className="font-bold">{testimonial.name}</h4>
                                         </div>
                                     </div>
-                                </Reveal>
-                            </Card>
+                                </Card>
+                            </Reveal>
                         ))}
                     </div>
 
-                    {/* Stats */}
-                    <Reveal delay={0.2}>
+                    <Reveal delay={0.3}>
+                        {/* Stats */}
                         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
                             <div className="text-center">
                                 <div className="text-4xl font-bold text-(--principal-1) mb-2">12+</div>
@@ -80,6 +79,5 @@ export default function Testimonials() {
                     </Reveal>
                 </div>
             </section>
-        </Reveal>
     );
 }
