@@ -86,22 +86,21 @@ export default function Contact() {
     };
 
     return (
-        <Reveal delay={0.1}>
-            <section id="contact" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
+        <section id="contact" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
+                    <SectionTitle>
+                        {t('get_in')} <span className="text-(--principal-1)">{t('touch')}.</span>
+                    </SectionTitle>
+
+                    <p className="text-(--text-2) text-xl text-center mb-16 max-w-3xl mx-auto">
+                        {t('description')}
+                    </p>
+                </Reveal>
+
+                <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    {/* Contact Info */}
                     <Reveal delay={0.2}>
-                        <SectionTitle>
-                            {t('get_in')} <span className="text-(--principal-1)">{t('touch')}.</span>
-                        </SectionTitle>
-
-                        <p className="text-(--text-2) text-xl text-center mb-16 max-w-3xl mx-auto">
-                            {t('description')}
-                        </p>
-                    </Reveal>
-
-                    <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                        {/* Contact Info */}
-                        <Reveal delay={0.2}>
                             <div>
                                 <h3 className="text-2xl font-bold mb-6">{t('contact_info_title')}</h3>
                                 <p className="text-(--text-2) mb-8">
@@ -159,9 +158,9 @@ export default function Contact() {
                                     </p>
                                 </div>
                             </div>
-                        </Reveal>
-                        {/* Contact Form */}
-                        <Reveal delay={0.2}>
+                    </Reveal>
+                    {/* Contact Form */}
+                    <Reveal delay={0.25}>
                             <Card variant="dark" className="border border-(--base-2)">
                                 <h3 className="text-2xl font-bold mb-6">{t('form_title')}</h3>
 
@@ -252,10 +251,9 @@ export default function Contact() {
                                     </Button>
                                 </form>
                             </Card>
-                        </Reveal>
-                    </div>
+                    </Reveal>
                 </div>
-            </section >
-        </Reveal>
+            </div>
+        </section >
     );
 }

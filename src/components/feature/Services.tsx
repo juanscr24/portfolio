@@ -9,10 +9,9 @@ export default function Services() {
     const t = useTranslations('services');
 
     return (
-        <Reveal delay={0.1}>
-            <section id="services" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
+        <section id="services" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                         <SectionTitle>
                             {t('my')} <span className="text-(--principal-1)">{t('services')}.</span>
                         </SectionTitle>
@@ -21,11 +20,10 @@ export default function Services() {
                             {t('description')}
                         </p>
                     </Reveal>
-                    <Reveal delay={0.2}>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {services.map((service, index) => (
-                                <Card key={index} className="hover:border-(--principal-1) bg-(--base-2) border-2 border-transparent transition-all group">
-                                    <Reveal delay={0.1 * index}>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {services.map((service, index) => (
+                            <Reveal key={index} delay={0.2 + (index * 0.15)}>
+                                <Card className="hover:border-(--principal-1) bg-(--base-2) border-2 border-transparent transition-all group">
                                         <div className="text-5xl mb-4">{service.icon}</div>
                                         <h3 className="text-2xl font-bold mb-3">{t(service.title)}</h3>
                                         <p className="text-(--text-2) mb-4">{t(service.description)}</p>
@@ -48,15 +46,13 @@ export default function Services() {
                                                         {tech}
                                                     </span>
                                                 ))}
-                                            </div>
-                                        </div>
-                                    </Reveal>
+                                    </div>
+                                </div>
                                 </Card>
-                            ))}
-                        </div>
-                    </Reveal>
-                </div>
-            </section>
-        </Reveal>
+                            </Reveal>
+                        ))}
+                    </div>
+            </div>
+        </section>
     );
 }
