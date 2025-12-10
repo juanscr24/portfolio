@@ -1,0 +1,18 @@
+{
+    "About": "About",
+    "me": "Me",
+    "subtitle": "Full Stack Developer focused on building modern, high-performance web experiences",
+    "description-1": "I'm a full stack developer with experience building modern web applications, dynamic interfaces, and scalable APIs. I specialize in the JavaScript/TypeScript ecosystem, working across both frontend and backend.",
+    "description-2": "I focus on creating well-structured, fast and maintainable solutions, always prioritizing user experience and clean architecture.",
+    "description-3": "I work primarily with React, Next.js, Node.js and Express, along with SQL and NoSQL databases. I also have experience with Java and Python for more specialized backend projects.",
+    "stack": "My Principal Stack",
+    "strengths": "What sets me apart",
+    "strengths-1": "Problem Solving",
+    "desc-strengths-1": "I identify, analyze, and solve technical problems quickly and efficiently, even under pressure.",
+    "strengths-2": "Fast Learning",
+    "desc-strengths-2": "I learn new technologies fast and apply them directly to real-world projects.",
+    "strengths-3": "Team Collaboration",
+    "desc-strengths-3": "I adapt well to teams, communicate clearly, and contribute to an efficient and productive workflow.",
+    "strengths-4": "Clean & Scalable Code",
+    "desc-strengths-4": "I write clean, modular, and maintainable code following modern best practices and patterns."
+}

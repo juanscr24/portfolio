@@ -1,0 +1,10 @@
+{
+    "Client": "Reseña de",
+    "testimonial": "Clientes",
+    "description": "Lo que dicen clientes y colegas sobre trabajar conmigo",
+    "stats": {
+        "completed": "Proyectos Completados",
+        "clients": "Clientes / Prácticas reales",
+        "satisfaction": "Satisfacción / Recomendación"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "featured": "Destacados",
+    "projects": "Proyectos",
+    "description": "Aquí encontrarás algunos de mis proyectos full stack reales que demuestran mi capacidad para construir aplicaciones escalables, modernas y centradas en el usuario.",
+    "key_features": "Características clave:",
+    "view_code": "Ver Código",
+    "live_demo": "Demo en Vivo",
+    "project_title_1": "PetMatch - Plataforma de Adopción de Mascotas",
+    "project_desc_1": "Plataforma full stack para adopción de mascotas con autenticación, rutas protegidas, sistema de match y gestión completa de mascotas.",
+    "project_features_1": [
+        "Autenticación basada en roles (Admin / Usuario)",
+        "Sistema de registro de mascotas y match de adopción",
+        "Panel administrativo con estadísticas reales",
+        "Interfaz responsiva construida con React y Tailwind"
+    ],
+    "project_role_1": "Desarrollador Full Stack",
+    "project_title_2": "GreenPath Market - Tienda Eco-Amigable",
+    "project_desc_2": "Plataforma de comercio electrónico con pagos seguros, gestión de productos y sistema automatizado de órdenes.",
+    "project_features_2": [
+        "Integración con Mercado Pago",
+        "Gestión de productos e inventario",
+        "Proceso de pago seguro con validaciones",
+        "API REST optimizada con Express"
+    ],
+    "project_role_2": "Desarrollador Full Stack",
+    "project_title_3": "TaskLancer (SaaS) - Gestión para Freelancers",
+    "project_desc_3": "Plataforma SaaS para freelancers con autenticación, sistema de roles, gestión de proyectos y paneles dinámicos.",
+    "project_features_3": [
+        "Autenticación con NextAuth",
+        "Control de acceso basado en roles",
+        "Gestión de proyectos y tareas",
+        "Construido con Next.js, Prisma y PostgreSQL"
+    ],
+    "project_role_3": "Desarrollador Full Stack",
+    "project_title_4": "SkillSwap - Plataforma de Intercambio de Habilidades",
+    "project_desc_4": "Plataforma donde los usuarios pueden intercambiar habilidades, conectar con otros, agendar sesiones y gestionar categorías de aprendizaje.",
+    "project_features_4": [
+        "Perfiles de usuario con categorías de habilidades",
+        "Sistema de solicitudes de intercambio",
+        "Mensajería y programación de sesiones",
+        "Construido con React, Node.js y PostgreSQL"
+    ],
+    "project_role_4": "Desarrollador Full Stack",
+    "project_title_5": "HelpDeskPro - Sistema de Gestión de Tickets",
+    "project_desc_5": "Plataforma a nivel empresarial para gestionar tickets de soporte técnico con automatización, notificaciones por correo y acceso basado en roles.",
+    "project_features_5": [
+        "Gestión centralizada de tickets con estado y prioridad",
+        "Sistema de roles para Clientes y Agentes de Soporte",
+        "Notificaciones por correo para creación, actualización y cierre de tickets",
+        "Hilos de comentarios para una comunicación clara",
+        "Panel en tiempo real con métricas y datos de rendimiento"
+    ],
+    "project_role_5": "Desarrollador Full Stack"
+}

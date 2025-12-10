@@ -1,0 +1,18 @@
+{
+    "About": "Sobre",
+    "me": "Mi",
+    "subtitle": "Desarrollador Full Stack enfocado en crear experiencias web modernas y de alto rendimiento",
+    "description-1": "Soy un desarrollador full stack con experiencia construyendo aplicaciones web modernas, interfaces dinámicas y APIs escalables. Me especializo en el ecosistema JavaScript/TypeScript, trabajando tanto en frontend como en backend.",
+    "description-2": "Mi enfoque está en desarrollar soluciones bien estructuradas, rápidas y fáciles de mantener, siempre priorizando la experiencia del usuario y las buenas prácticas.",
+    "description-3": "Trabajo principalmente con React, Next.js, Node.js y Express, junto a bases de datos SQL y NoSQL. También tengo experiencia en Java y Python para proyectos backend más específicos.",
+    "stack": "Mi Stack Principal",
+    "strengths": "Lo que me diferencia",
+    "strengths-1": "Resolución de Problemas",
+    "desc-strengths-1": "Identifico, analizo y soluciono problemas técnicos de forma rápida y eficiente, incluso bajo presión.",
+    "strengths-2": "Aprendizaje Acelerado",
+    "desc-strengths-2": "Aprendo nuevas tecnologías en poco tiempo y las aplico directamente a proyectos reales.",
+    "strengths-3": "Trabajo Colaborativo",
+    "desc-strengths-3": "Me adapto bien a equipos, comunico ideas claramente y contribuyo a crear un flujo de trabajo productivo.",
+    "strengths-4": "Código Escalable y Ordenado",
+    "desc-strengths-4": "Desarrollo código limpio, modular y mantenible siguiendo buenas prácticas y patrones modernos."
+}

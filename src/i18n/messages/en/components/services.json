@@ -1,0 +1,57 @@
+{
+    "my": "My",
+    "services": "Services",
+    "description": "I offer professional web development services to help you take your project to the next level.",
+    "service_title_1": "Full Stack Web Development",
+    "service_desc_1": "Development of complete web applications, from frontend to backend, with functional and scalable solutions for small to medium projects.",
+    "service_features_1": [
+        "Responsive and modern frontend",
+        "Functional backend",
+        "API integration",
+        "Deployment support"
+    ],
+    "service_tech_1": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express"
+    ],
+    "service_title_2": "UI/UX Design",
+    "service_desc_2": "Creating intuitive and attractive interfaces that improve user experience and engagement.",
+    "service_features_2": [
+        "Wireframes and prototypes",
+        "Design system",
+        "Responsive design",
+        "UX optimization"
+    ],
+    "service_tech_2": [
+        "Figma",
+        "Tailwind CSS",
+        "Material-UI"
+    ],
+    "service_title_3": "API Development",
+    "service_desc_3": "Design and implementation of REST APIs for web applications, with authentication and proper documentation.",
+    "service_features_3": [
+        "REST APIs",
+        "Documentation",
+        "Authentication and security",
+        "Integration with frontend"
+    ],
+    "service_tech_3": [
+        "Node.js",
+        "Express"
+    ],
+    "service_title_4": "Maintenance and Improvements",
+    "service_desc_4": "Updating and optimizing existing web applications, adding new features and improving performance.",
+    "service_features_4": [
+        "Bug fixing",
+        "Dependency updates",
+        "New features",
+        "Code optimization"
+    ],
+    "service_tech_4": [
+        "Refactoring",
+        "Testing",
+        "Deployment support"
+    ]
+}
