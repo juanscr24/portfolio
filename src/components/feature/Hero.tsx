@@ -40,9 +40,13 @@ export default function Hero() {
                                     <Button target="" variant="primary" size="lg" href="#contact">
                                         {t('button')}
                                     </Button>
-                                    <Button target="" variant="outline" size="lg" href="/cv.pdf">
+                                    <Link
+                                        href="/cv.pdf"
+                                        download="Juan_Sebastian_Cardona_CV.pdf"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-(--principal-1) text-(--principal-1) hover:bg-(--principal-1) hover:text-white transition-all duration-300"
+                                    >
                                         {t('button-2')}
-                                    </Button>
+                                    </Link>
                                 </div>
                             </div>
                         </Reveal>

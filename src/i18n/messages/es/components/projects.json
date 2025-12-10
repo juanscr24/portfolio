@@ -40,5 +40,15 @@
         "Mensajería y programación de sesiones",
         "Construido con React, Node.js y PostgreSQL"
     ],
-    "project_role_4": "Desarrollador Full Stack"
+    "project_role_4": "Desarrollador Full Stack",
+    "project_title_5": "HelpDeskPro - Sistema de Gestión de Tickets",
+    "project_desc_5": "Plataforma a nivel empresarial para gestionar tickets de soporte técnico con automatización, notificaciones por correo y acceso basado en roles.",
+    "project_features_5": [
+        "Gestión centralizada de tickets con estado y prioridad",
+        "Sistema de roles para Clientes y Agentes de Soporte",
+        "Notificaciones por correo para creación, actualización y cierre de tickets",
+        "Hilos de comentarios para una comunicación clara",
+        "Panel en tiempo real con métricas y datos de rendimiento"
+    ],
+    "project_role_5": "Desarrollador Full Stack"
 }
