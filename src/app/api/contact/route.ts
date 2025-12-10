@@ -66,8 +66,16 @@ ${message}
 
   } catch (error) {
     console.error('Error procesando contacto:', error);
+    
+    // Mensaje más informativo del error
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+    console.error('Detalles del error:', errorMessage);
+    
     return NextResponse.json(
-      { error: 'Error interno del servidor' },
+      { 
+        error: 'Error al enviar el mensaje',
+        details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
+      },
       { status: 500 }
     );
   }
