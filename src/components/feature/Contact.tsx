@@ -101,156 +101,156 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <Reveal delay={0.2}>
-                            <div>
-                                <h3 className="text-2xl font-bold mb-6">{t('contact_info_title')}</h3>
-                                <p className="text-(--text-2) mb-8">
-                                    {t('contact_info_desc')}
-                                </p>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-6">{t('contact_info_title')}</h3>
+                            <p className="text-(--text-2) mb-8">
+                                {t('contact_info_desc')}
+                            </p>
 
-                                {/* Contact Methods */}
-                                <div className="space-y-6 mb-8">
-                                    {contactInfo.map((info, index) => (
-                                        <div key={index} className="flex items-start gap-4">
-                                            <div className="w-12 h-12 bg-(--principal-1) rounded-lg flex items-center justify-center text-(--text-1) shrink-0">
-                                                {info.icon}
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold mb-1">{t(info.title.toLowerCase())}</h4>
-                                                {info.link ? (
-                                                    <Link target="_blank" href={info.link} className="text-(--text-2) hover:text-(--principal-1) transition-colors cursor-pointer">
-                                                        {info.value}
-                                                    </Link>
-                                                ) : (
-                                                    <p className="text-(--text-2)">{info.value}</p>
-                                                )}
-                                            </div>
+                            {/* Contact Methods */}
+                            <div className="space-y-6 mb-8">
+                                {contactInfo.map((info, index) => (
+                                    <div key={index} className="flex items-start gap-4">
+                                        <div className="w-12 h-12 bg-(--principal-1) rounded-lg flex items-center justify-center text-(--text-1) shrink-0">
+                                            {info.icon}
                                         </div>
+                                        <div>
+                                            <h4 className="font-semibold mb-1">{t(info.title.toLowerCase())}</h4>
+                                            {info.link ? (
+                                                <Link target="_blank" href={info.link} className="text-(--text-2) hover:text-(--principal-1) transition-colors cursor-pointer">
+                                                    {info.value}
+                                                </Link>
+                                            ) : (
+                                                <p className="text-(--text-2)">{info.value}</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Social Links */}
+                            <div>
+                                <h4 className="font-semibold mb-4">{t('find_me')}</h4>
+                                <div className="flex gap-4">
+                                    {socialLinks.map((social, index) => (
+                                        <Link
+                                            key={index}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-12 h-12 bg-(--base-2) hover:bg-(--principal-1) rounded-lg flex items-center justify-center transition-all"
+                                            aria-label={social.name}
+                                        >
+                                            {social.icon}
+                                        </Link>
                                     ))}
                                 </div>
-
-                                {/* Social Links */}
-                                <div>
-                                    <h4 className="font-semibold mb-4">{t('find_me')}</h4>
-                                    <div className="flex gap-4">
-                                        {socialLinks.map((social, index) => (
-                                            <Link
-                                                key={index}
-                                                href={social.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-12 h-12 bg-(--base-2) hover:bg-(--principal-1) rounded-lg flex items-center justify-center transition-all"
-                                                aria-label={social.name}
-                                            >
-                                                {social.icon}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Availability Badge */}
-                                <div className="mt-8 p-6 bg-(--base-2) rounded-lg border border-(--base-2)">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                        <span className="font-semibold text-green-500">{t('availability_title')}</span>
-                                    </div>
-                                    <p className="text-sm text-(--text-2)">
-                                        {t('availability_desc')}
-                                    </p>
-                                </div>
                             </div>
+
+                            {/* Availability Badge */}
+                            <div className="mt-8 p-6 bg-(--base-2) rounded-lg border border-(--base-2)">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <span className="font-semibold text-green-500">{t('availability_title')}</span>
+                                </div>
+                                <p className="text-sm text-(--text-2)">
+                                    {t('availability_desc')}
+                                </p>
+                            </div>
+                        </div>
                     </Reveal>
                     {/* Contact Form */}
                     <Reveal delay={0.25}>
-                            <Card variant="dark" className="border border-(--base-2)">
-                                <h3 className="text-2xl font-bold mb-6">{t('form_title')}</h3>
+                        <Card variant="dark" className="border border-(--base-2)">
+                            <h3 className="text-2xl font-bold mb-6">{t('form_title')}</h3>
 
-                                {submitStatus.type && (
-                                    <div className={`mb-4 p-4 rounded-lg ${submitStatus.type === 'success'
-                                        ? 'bg-green-500/20 text-green-500 border border-green-500'
-                                        : 'bg-red-500/20 text-red-500 border border-red-500'
-                                        }`}>
-                                        {submitStatus.message}
-                                    </div>
-                                )}
+                            {submitStatus.type && (
+                                <div className={`mb-4 p-4 rounded-lg ${submitStatus.type === 'success'
+                                    ? 'bg-green-500/20 text-green-500 border border-green-500'
+                                    : 'bg-red-500/20 text-red-500 border border-red-500'
+                                    }`}>
+                                    {submitStatus.message}
+                                </div>
+                            )}
 
-                                <form onSubmit={handleSubmit} className="space-y-4">
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                            {t('form_name')}
-                                        </label>
-                                        <Input
-                                            type="text"
-                                            placeholder={t('form_name_placeholder')}
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleInputChange}
-                                            required
-                                        />
-                                    </div>
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-semibold mb-2 text-(--text-2)">
+                                        {t('form_name')}
+                                    </label>
+                                    <Input
+                                        type="text"
+                                        placeholder={t('form_name_placeholder')}
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
 
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                            {t('form_email')}
-                                        </label>
-                                        <Input
-                                            type="email"
-                                            placeholder={t('form_email_placeholder')}
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            required
-                                        />
-                                    </div>
+                                <div>
+                                    <label className="block text-sm font-semibold mb-2 text-(--text-2)">
+                                        {t('form_email')}
+                                    </label>
+                                    <Input
+                                        type="email"
+                                        placeholder={t('form_email_placeholder')}
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
 
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                            {t('form_subject')}
-                                        </label>
-                                        <Input
-                                            type="text"
-                                            placeholder={t('form_subject_placeholder')}
-                                            name="subject"
-                                            value={formData.subject}
-                                            onChange={handleInputChange}
-                                            required
-                                        />
-                                    </div>
+                                <div>
+                                    <label className="block text-sm font-semibold mb-2 text-(--text-2)">
+                                        {t('form_subject')}
+                                    </label>
+                                    <Input
+                                        type="text"
+                                        placeholder={t('form_subject_placeholder')}
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
 
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-2 text-(--text-2)">
-                                            {t('form_message')}
-                                        </label>
-                                        <Input
-                                            type="textarea"
-                                            placeholder={t('form_message_placeholder')}
-                                            name="message"
-                                            value={formData.message}
-                                            onChange={handleInputChange}
-                                            rows={6}
-                                            required
-                                        />
-                                    </div>
+                                <div>
+                                    <label className="block text-sm font-semibold mb-2 text-(--text-2)">
+                                        {t('form_message')}
+                                    </label>
+                                    <Input
+                                        type="textarea"
+                                        placeholder={t('form_message_placeholder')}
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        rows={6}
+                                        required
+                                    />
+                                </div>
 
-                                    {/* reCAPTCHA Checkbox */}
-                                    <div className="flex justify-center">
-                                        <ReCAPTCHA
-                                            ref={recaptchaRef}
-                                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                                            theme="dark"
-                                        />
-                                    </div>
+                                {/* reCAPTCHA Checkbox */}
+                                <div className="flex justify-center">
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                                        theme="dark"
+                                    />
+                                </div>
 
-                                    <Button
-                                        type='submit'
-                                        variant="primary"
-                                        className="w-full"
-                                        size="lg"
-                                        disabled={isSubmitting}
-                                    >
-                                        {isSubmitting ? t('form_sending') || 'Enviando...' : t('form_submit')}
-                                    </Button>
-                                </form>
-                            </Card>
+                                <Button
+                                    type='submit'
+                                    variant="primary"
+                                    className="w-full"
+                                    size="lg"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? t('form_sending') || 'Enviando...' : t('form_submit')}
+                                </Button>
+                            </form>
+                        </Card>
                     </Reveal>
                 </div>
             </div>
