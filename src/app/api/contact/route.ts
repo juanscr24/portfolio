@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,11 +34,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Aquí puedes agregar la lógica para enviar el email
-    // Por ejemplo, usando Resend, SendGrid, Nodemailer, etc.
-    console.log('Formulario recibido:', { name, email, subject, message });
+    // 🔥 CONFIGURAR TRANSPORTER DE GMAIL
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS, // Clave de aplicación de Google
+      },
+    });
 
-    // Por ahora solo retornamos éxito
+    // 🔥 ENVIAR CORREO
+    await transporter.sendMail({
+      from: email,
+      to: process.env.MAIL_TO, // A dónde llegará
+      subject: `📩 Nuevo mensaje: ${subject}`,
+      text: `
+Nombre: ${name}
+Correo: ${email}
+Asunto: ${subject}
+
+Mensaje:
+${message}
+      `,
+    });
+
+    // Respuesta exitosa
     return NextResponse.json(
       { message: 'Mensaje enviado exitosamente' },
       { status: 200 }
