@@ -12,22 +12,21 @@ export default function Projects() {
     const t = useTranslations('projects');
 
     return (
-        <Reveal delay={0.1}>
-            <section id="projects" className="bg-(--base-1) text-white py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
-                        <SectionTitle>
-                            {t('featured')} <span className="text-(--principal-1)">{t('projects')}.</span>
-                        </SectionTitle>
+        <section id="projects" className="bg-(--base-1) text-white py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
+                    <SectionTitle>
+                        {t('featured')} <span className="text-(--principal-1)">{t('projects')}.</span>
+                    </SectionTitle>
 
-                        <p className="text-gray-400 text-xl text-center mb-16 max-w-3xl mx-auto">
-                            {t('description')}
-                        </p>
-                    </Reveal>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {projects.map((project, index) => (
-                            <Card key={index} className="overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all">
-                                <Reveal delay={0.1 * index}>
+                    <p className="text-gray-400 text-xl text-center mb-16 max-w-3xl mx-auto">
+                        {t('description')}
+                    </p>
+                </Reveal>
+                <div className="grid md:grid-cols-2 gap-8">
+                    {projects.map((project, index) => (
+                        <Reveal key={index} delay={0.1 + (index * 0.1)}>
+                            <Card className="overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all">
                                     {/* Project Image */}
                                     <div className="relative h-64 bg-linear-to-br from-gray-800 to-gray-900 mb-6 rounded-lg overflow-hidden">
                                         <div className="absolute inset-0 flex items-center justify-center text-gray-600">
@@ -77,12 +76,11 @@ export default function Projects() {
                                             </Button>
                                         )}
                                     </div>
-                                </Reveal>
                             </Card>
-                        ))}
-                    </div>
+                        </Reveal>
+                    ))}
                 </div>
-            </section>
-        </Reveal>
+            </div>
+        </section>
     );
 }

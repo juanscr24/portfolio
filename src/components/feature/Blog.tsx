@@ -66,9 +66,9 @@ export default function Blog() {
     const categories = ['All', 'Frontend', 'Backend', 'DevOps', 'Tutorial', 'Best Practices', 'Personal'];
 
     return (
-        <Reveal delay={0.1}>
-            <section id="blog" className="bg-(--base-1) text-(--text-1) py-20">
-                <div className="container mx-auto px-6">
+        <section id="blog" className="bg-(--base-1) text-(--text-1) py-20">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                     <SectionTitle>
                         Latest <span className="text-(--text-2)">Articles.</span>
                     </SectionTitle>
@@ -76,6 +76,7 @@ export default function Blog() {
                     <p className="text-(--text-2) text-xl text-center mb-12 max-w-3xl mx-auto">
                         Comparto conocimientos, tutoriales y reflexiones sobre desarrollo web y tecnología.
                     </p>
+                </Reveal>
 
                     {/* Categories Filter */}
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -165,7 +166,6 @@ export default function Blog() {
                         </div>
                     </Card>
                 </div>
-            </section>
-        </Reveal>
+        </section>
     );
 }

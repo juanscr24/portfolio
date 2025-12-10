@@ -11,10 +11,9 @@ export default function Education() {
 
 
     return (
-        <Reveal delay={0.1}>
-            <section id="education" className="bg-(--base-1) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
+        <section id="education" className="bg-(--base-1) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                         <SectionTitle>
                             {t('education')} & <span className="text-(--principal-1)">{t('certifications')}.</span>
                         </SectionTitle>
@@ -25,11 +24,10 @@ export default function Education() {
                     </Reveal>
 
                     {/* Main Education Cards */}
-                    <Reveal delay={0.2}>
-                        <div className="grid md:grid-cols-2 gap-6 mb-16">
-                            {education.map((item, index) => (
-                                <Card key={index} className="hover:border-(--principal-1) border-2 border-transparent transition-all">
-                                    <Reveal delay={0.2 * index}>
+                    <div className="grid md:grid-cols-2 gap-6 mb-16">
+                        {education.map((item, index) => (
+                            <Reveal key={index} delay={0.2 + (index * 0.1)}>
+                                <Card className="hover:border-(--principal-1) border-2 border-transparent transition-all">
                                         <div className="flex items-start gap-4">
                                             <div className="text-5xl">{item.icon}</div>
                                             <div className="flex-1">
@@ -40,14 +38,13 @@ export default function Education() {
                                                 <p className="text-(--principal-1) font-semibold mb-2">{t(item.institution)}</p>
                                                 <p className="text-(--text-2) text-sm mb-3">{t(item.period)}</p>
                                                 <p className="text-(--text-3) text-sm">{t(item.description)}</p>
-                                            </div>
                                         </div>
-                                    </Reveal>
+                                    </div>
                                 </Card>
-                            ))}
-                        </div>
-                    </Reveal>
-                    <Reveal delay={0.2}>
+                            </Reveal>
+                        ))}
+                    </div>
+                    <Reveal delay={0.3}>
                         {/* Continuous Learning Section */}
                         <div className="max-w-3xl mx-auto">
                             <h3 className="text-2xl font-bold text-center mb-8">
@@ -94,6 +91,5 @@ export default function Education() {
                     </Reveal>
                 </div>
             </section >
-        </Reveal>
     );
 }

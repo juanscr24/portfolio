@@ -11,16 +11,15 @@ export default function About() {
     const t = useTranslations('about');
 
     return (
-        <Reveal delay={0.1}>
-            <section id="about" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
-                <div className="container mx-auto px-6">
-                    <Reveal delay={0.2}>
+        <section id="about" className="bg-(--base-2) text-(--text-1) py-20 max-md:py-10 max-sm:py-6">
+            <div className="container mx-auto px-6">
+                <Reveal delay={0.1}>
                         <SectionTitle>
                             {t('About')} <span className="text-(--principal-1)">{t('me')}.</span>
                         </SectionTitle>
                     </Reveal>
                     <div className="grid md:grid-cols-2 gap-12">
-                        <Reveal delay={0.3}>
+                        <Reveal delay={0.2}>
                             {/* Description */}
                             <div>
                                 <h3 className="text-2xl font-bold mb-6">
@@ -40,7 +39,7 @@ export default function About() {
                             </div>
                         </Reveal>
 
-                        <Reveal delay={0.3}>
+                        <Reveal delay={0.25}>
                             {/* Stack Principal */}
                             <div>
                                 <h3 className="text-2xl font-bold mb-6 text-(--principal-1)">
@@ -88,6 +87,5 @@ export default function About() {
                     </Reveal>
                 </div>
             </section>
-        </Reveal>
     );
 }
