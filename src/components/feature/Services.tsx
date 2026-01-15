@@ -23,7 +23,7 @@ export default function Services() {
                     <div className="grid md:grid-cols-2 gap-8">
                         {services.map((service, index) => (
                             <Reveal key={index} delay={0.2 + (index * 0.15)}>
-                                <Card className="hover:border-(--principal-1) bg-(--base-2) border-2 border-transparent transition-all group">
+                                <Card className="h-full hover:border-(--principal-1) bg-(--base-2) border-2 border-transparent transition-all group">
                                         <div className="text-5xl mb-4">{service.icon}</div>
                                         <h3 className="text-2xl font-bold mb-3">{t(service.title)}</h3>
                                         <p className="text-(--text-2) mb-4">{t(service.description)}</p>
