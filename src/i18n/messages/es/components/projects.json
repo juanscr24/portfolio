@@ -5,12 +5,12 @@
     "key_features": "Características clave:",
     "view_code": "Ver Código",
     "live_demo": "Demo en Vivo",
-    "project_title_1": "PetMatch - Plataforma de Adopción de Mascotas",
-    "project_desc_1": "Plataforma full stack para adopción de mascotas con autenticación, rutas protegidas, sistema de match y gestión completa de mascotas.",
+    "project_title_1": "SkillSwap - Plataforma de Intercambio de Habilidades",
+    "project_desc_1": "Una plataforma full stack que permite a los usuarios intercambiar habilidades, conectar con otras personas y gestionar colaboraciones basadas en habilidades mediante un sistema seguro y fácil de usar.",
     "project_features_1": [
         "Autenticación basada en roles (Admin / Usuario)",
-        "Sistema de registro de mascotas y match de adopción",
-        "Panel administrativo con estadísticas reales",
+        "Sistema de publicación y emparejamiento de habilidades",
+        "Perfiles de usuario y gestión de habilidades",
         "Interfaz responsiva construida con React y Tailwind"
     ],
     "project_role_1": "Desarrollador Full Stack",

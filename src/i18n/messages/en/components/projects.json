@@ -5,12 +5,12 @@
     "key_features": "Key Features:",
     "view_code": "View Code",
     "live_demo": "Live Demo",
-    "project_title_1": "PetMatch - Pet Adoption Platform",
-    "project_desc_1": "A full stack platform for pet adoption with authentication, protected routes, match system and pet management.",
+    "project_title_1": "SkillSwap - Skill Exchange Platform",
+    "project_desc_1": "A full stack platform that allows users to exchange skills, connect with others, and manage skill-based collaborations through a secure and user-friendly system.",
     "project_features_1": [
         "Role-based authentication (Admin / User)",
-        "Pet registry and adoption match system",
-        "Admin dashboard with real statistics",
+        "Skill listing and matching system",
+        "User profiles and skill management",
         "Responsive UI built with React and Tailwind"
     ],
     "project_role_1": "Full Stack Developer",
