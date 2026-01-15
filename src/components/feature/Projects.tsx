@@ -26,7 +26,7 @@ export default function Projects() {
                 <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <Reveal key={index} delay={0.1 + (index * 0.1)}>
-                            <Card className="overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all">
+                            <Card className="h-full overflow-hidden group hover:border-(--principal-1) border-2 border-transparent transition-all flex flex-col">
                                     {/* Project Image */}
                                     <div className="relative h-64 bg-linear-to-br from-gray-800 to-gray-900 mb-6 rounded-lg overflow-hidden">
                                         <div className="absolute inset-0 flex items-center justify-center text-gray-600">
@@ -66,7 +66,7 @@ export default function Projects() {
                                     </div>
 
                                     {/* Links */}
-                                    <div className="flex gap-4">
+                                    <div className="flex gap-4 mt-auto">
                                         <Button variant="primary" size="sm" href={project.github}>
                                             {t('view_code')}
                                         </Button>

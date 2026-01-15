@@ -236,7 +236,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 - GitHub: [@juanscr24](https://github.com/juanscr24)
 - LinkedIn: [Juan Sebastián Cardona](https://www.linkedin.com/in/juanscr24)
-- Email: devpoint.hub@gmail.com
+- Email: juanscr24@gmail.com
 
 ---
 

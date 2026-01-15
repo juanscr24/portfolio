@@ -27,7 +27,7 @@ export default function Education() {
                     <div className="grid md:grid-cols-2 gap-6 mb-16">
                         {education.map((item, index) => (
                             <Reveal key={index} delay={0.2 + (index * 0.1)}>
-                                <Card className="hover:border-(--principal-1) border-2 border-transparent transition-all">
+                                <Card className="h-full hover:border-(--principal-1) border-2 border-transparent transition-all">
                                         <div className="flex items-start gap-4">
                                             <div className="text-5xl">{item.icon}</div>
                                             <div className="flex-1">

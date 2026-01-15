@@ -1,4 +1,4 @@
-import { greenpath_image, petmatch_image, skillswap_image, tasklancer_image, helpdeskpro_image } from "../../public/images";
+import { greenpath_image, skillswap_image, tasklancer_image, helpdeskpro_image } from "../../public/images";
 
 export const projects = [
     {
@@ -8,7 +8,7 @@ export const projects = [
         tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth', 'Tailwind CSS'],
         features: 'project_features_3',
         github: 'https://github.com/juanscr24/tasklancer',
-        demo: '',
+        demo: 'https://tasklancer.devpoint.app',
         role: 'project_role_3'
     },
     {
@@ -24,11 +24,11 @@ export const projects = [
     {
         title: 'project_title_1',
         description: 'project_desc_1',
-        image: petmatch_image,
+        image: skillswap_image,
         tags: ['Next.js', 'React', 'Node.js', 'Express', 'MySQL', 'JWT', 'Tailwind CSS'],
         features: 'project_features_1',
-        github: 'https://github.com/juanscr24/pet-match',
-        demo: '',
+        github: 'https://github.com/juanscr24/skill_swap',
+        demo: 'https://skillswap.devpoint.app',
         role: 'project_role_1'
     },
     {

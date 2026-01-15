@@ -24,7 +24,7 @@ export default function Testimonials() {
                     <div className="grid md:grid-cols-3 gap-8 mb-12">
                         {testimonials.map((testimonial, index) => (
                             <Reveal key={index} delay={0.2 + (index * 0.1)}>
-                                <Card className="hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
+                                <Card className="h-full hover:border-(--principal-1) bg-(--base-1) border-2 border-transparent transition-all flex flex-col">
                                     {/* Stars */}
                                     <div className="flex gap-1 mb-4">
                                         {[...Array(testimonial.rating)].map((_, i) => (
